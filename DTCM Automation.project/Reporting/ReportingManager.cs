@@ -13,6 +13,7 @@ namespace DTCM_Automation.project.Reporting
     /// </summary>
     public class ReportingManager
     {
+
         /// <summary>
         /// Create new instance of Extent report
         /// </summary>
