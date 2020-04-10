@@ -48,5 +48,39 @@ namespace DTCM_Automation.project
             }
 
         }
-    }
+
+        [TestMethod]
+        public void Login1()
+        {
+
+            using (var xrmBrowser = new Browser(TestSettings.Options))
+            {
+                xrmBrowser.Driver.WaitForPageToLoad();
+                xrmBrowser.LoginPage.Login(_xrmUri, _username, _password);
+
+                xrmBrowser.Dialogs.CloseWarningDialog(2);
+
+
+                //companyform field = new Common.companyform();
+                //field.Addnewcompany(xrmBrowser);
+
+
+
+                POIcompany poiform = new POIcompany();
+                poiform.companypoiform(xrmBrowser);
+
+
+                Addbrand brand = new Addbrand();
+                brand.addnewbrand(xrmBrowser);
+
+
+                Addbranch branch = new Addbranch();
+                branch.addnewbranch(xrmBrowser);
+
+            }
+
+        }
+    
+
+}
 }
